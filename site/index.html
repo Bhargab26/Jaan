@@ -1,9 +1,373 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>I love you.</title>
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Kavoon' rel='stylesheet'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+  width: 50%;
+
+}
+p
+{
+	margin-top: 10px;
+ text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px green;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font: sans-serif;
+}
+h3{
+	font-family: 'Aclonica';font-size: 22px;
+	text-align: center;
+	color: red;
+	text-shadow: 1px 1px 2px blue;
+}
+h4{
+font-family: 'Kavoon';font-size: 22px;
+text-align: center;
+	color: Cyan;
+	text-shadow: 1px 1px 2px red, 0 0 25px navy, 0 0 5px green;
+	font-size: 50px;
+}
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+@media (min-width: 992px) {
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+      float: left;
+      padding: 15px;
+    }
+    .col-lg-1 {
+      width: 8.33%;
+    }
+    .col-lg-2 {
+      width: 16.66%;
+    }
+    .col-lg-3 {
+      width: 25%;
+    }
+    .col-lg-4 {
+      width: 33.33%;
+    }
+    .col-lg-5 {
+      width: 41.66%;
+    }
+    .col-lg-6 {
+      width: 50%;
+    }
+    .col-lg-7 {
+      width: 58.33%;
+    }
+    .col-lg-8 {
+      width: 66.66%;
+    }
+    .col-lg-9 {
+      width: 75%;
+    }
+    .col-lg-10 {
+      width: 83.33%;
+    }
+    .col-lg-11 {
+      width: 91.66%;
+    }
+    .col-lg-12 {
+      width: 100%;
+    }
+  }
+  
+  /* Tablet version */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+      float: left;
+      padding: 15px;
+    }
+    .col-lg-1 {
+      width: 8.33%;
+    }
+    .col-lg-2 {
+      width: 16.66%;
+    }
+    .col-lg-3 {
+      width: 25%;
+    }
+    .col-lg-4 {
+      width: 33.33%;
+    }
+    .col-lg-5 {
+      width: 41.66%;
+    }
+    .col-lg-6 {
+      width: 50%;
+    }
+    .col-lg-7 {
+      width: 58.33%;
+    }
+    .col-lg-8 {
+      width: 66.66%;
+    }
+    .col-lg-9 {
+      width: 75%;
+    }
+    .col-lg-10 {
+      width: 83.33%;
+    }
+    .col-lg-11 {
+      width: 91.66%;
+    }
+    .col-lg-12 {
+      width: 100%;
+    }
+  }
+
+  /* Mobile version */
+  @media (max-width: 767px) {
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+      float: left;
+      padding: 15px;
+    }
+    .col-lg-1 {
+      width: 8.33%;
+    }
+    .col-lg-2 {
+      width: 16.66%;
+    }
+    .col-lg-3 {
+      width: 25%;
+    }
+    .col-lg-4 {
+      width: 33.33%;
+    }
+    .col-lg-5 {
+      width: 41.66%;
+    }
+    .col-lg-6 {
+      width: 50%;
+    }
+    .col-lg-7 {
+      width: 58.33%;
+    }
+    .col-lg-8 {
+      width: 66.66%;
+    }
+    .col-lg-9 {
+      width: 75%;
+    }
+    .col-lg-10 {
+      width: 83.33%;
+    }
+    .col-lg-11 {
+      width: 91.66%;
+    }
+    .col-lg-12 {
+      width: 100%;
+    }
+  }
+</style>
 <body>
 
+<h2 style="text-align:center; font-family: Sofia">My World</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 7</div>
+    <img src="mk0.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 7</div>
+    <img src="mk1.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 7</div>
+    <img src="mk2.jpeg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 7</div>
+    <img src="mk3.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 7</div>
+    <img src="mk4.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 7</div>
+    <img src="mk5.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">7 / 7</div>
+    <img src="mk6.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="mk0.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Love">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mk1.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Hey girl">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mk2.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Hey beautiful">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mk3.jpg" style="width:100%" onclick="currentSlide(4)" alt="Take this">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mk4.jpg" style="width:100%" onclick="currentSlide(5)" alt="Heyyy">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="mk5.jpg" style="width:100%" onclick="currentSlide(6)" alt="I Love you">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mk6.jpg" style="width:100%" onclick="currentSlide(6)" alt="I Love you more">
+    </div>
+  </div>
+</div>
+<p>
+	Finally the day has come. First of all Happy 20th birthday Mirinda. May the upcoming year brings you loads of happiness,love and positive thoughts and prayers. Your smiling face has always been a blessing for me. The positive vibes you bring towards me are just out of this world.</p> <p style="margin-top: 1px;">You've been a constant inspiration for me. The girl who always thinks of everyone else,who always cares for me,who is always ready to listen my besura songs. The girl I Love. </p>
+<p>You're no less than an Angel to me,an Angel of God,who came to my life to cancel all my sadness and multiply the happiness of my life.❤️ </p>
+<p>Now,I can't even imagine my life without you, you're my favorite,my love,my life,my everything.
+Happiest Birthday once again Love.
+</p>
+<h3>
+	Happy Birthday DHUNU.
+</h3>
+<h4>
+	I LOVE YOU❤️
+</h4>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
 </body>
 </html>
