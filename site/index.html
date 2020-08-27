@@ -124,6 +124,31 @@ text-align: center;
 .demo:hover {
   opacity: 1;
 }
+.center {
+  text-align: center;
+}
+
+.pagination {
+  display: inline-block;
+}
+.pagination a {
+
+  color: black;
+  float: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+  margin-top: 20px;
+}
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
 @media (min-width: 992px) {
     .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
       float: left;
@@ -322,7 +347,7 @@ text-align: center;
       <img class="demo cursor" src="mk5.jpg" style="width:100%" onclick="currentSlide(6)" alt="I Love you">
     </div>
     <div class="column">
-      <img class="demo cursor" src="mk6.jpg" style="width:100%" onclick="currentSlide(6)" alt="I Love you more">
+      <img class="demo cursor" src="mk6.jpg" style="width:100%" onclick="currentSlide(7)" alt="I Love you more">
     </div>
   </div>
 </div>
@@ -338,6 +363,16 @@ Happiest Birthday once again Love.
 <h4>
 	I LOVE YOU❤️
 </h4>
+
+
+<div class="center">
+<div class="pagination">
+  <a href="https://bhargab26.github.io/bday/site/">&laquo;</a>
+  <a href="https://bhargab26.github.io/Birthday/site/">1</a>
+  <a href="https://bhargab26.github.io/bday/site/">2</a>
+  <a href="https://bhargab26.github.io/mk/site/">3</a>
+  <a href="#">&raquo;</a>
+</div>
 <script>
 var slideIndex = 1;
 showSlides(slideIndex);
